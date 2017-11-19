@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">InventoryApp</string>
+    <string name="add_item_instructions">+ Click the floating button to add items</string>
+    <string name="order_button">Sell</string>
+    <string name="price_text">PRICE :</string>
+    <string name="quantity_text">QUANTITY :</string>
+    <string name="change_image_string">Change</string>
+    <string name="title_string">TITLE</string>
+    <string name="suppiler_number_string">Suppiler Number</string>
+    <string name="save_string">Save</string>
+    <string name="order_more_string">Order More ..</string>
+    <string name="delete_string">Delete</string>
+    <string name="fill_fields_message">Please fill all the fields!</string>
+    <string name="item_added_message">Item Added Successfully!</string>
+    <string name="add_error_message">There was an error adding the item</string>
+    <string name="item_update_message">Item updated successfully</string>
+    <string name="delete_confirmation_message">Do you want to Delete</string>
+    <string name="cancel_string">cancel</string>
+    <string name="delete_confirmation_string">Item deleted successfully!</string>
+    <string name="sold_out_string">SOLD OUT</string>
+</resources>
