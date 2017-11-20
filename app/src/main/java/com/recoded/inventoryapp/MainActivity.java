@@ -10,15 +10,17 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.recoded.inventoryapp.data.InventoryContract;
 import com.recoded.inventoryapp.data.InventoryDbHelper;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
-    InventoryDbHelper dbHelper;
-    Cursor data;
+    private ListView listView;
+    private InventoryDbHelper dbHelper;
+    private TextView noItemsText;
+    private Cursor data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton addButton = findViewById(R.id.add_button);
         listView = findViewById(R.id.products_list);
         dbHelper = new InventoryDbHelper(this);
+        noItemsText = findViewById(R.id.no_items_text);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +56,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void populateList(){
         Cursor c = dbHelper.read();
-        InventoryCursorAdapter adapter = new InventoryCursorAdapter(this,c);
-        listView.setAdapter(adapter);
+        if(c.getCount()>0){
+            InventoryCursorAdapter adapter = new InventoryCursorAdapter(this,c);
+            listView.setAdapter(adapter);
+        }else{
+            listView.setVisibility(View.GONE);
+            noItemsText.setVisibility(View.VISIBLE);
+        }
+
     }
 }

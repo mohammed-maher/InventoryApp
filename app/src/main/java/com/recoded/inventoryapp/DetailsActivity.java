@@ -24,21 +24,21 @@ import com.recoded.inventoryapp.data.InventoryDbHelper;
 import java.io.ByteArrayOutputStream;
 
 public class DetailsActivity extends AppCompatActivity {
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-    InventoryDbHelper dbHelper = new InventoryDbHelper(this);
-    ImageView productImage;
-    EditText titleText;
-    EditText priceText;
-    EditText quantityText;
-    EditText suppilerText;
-    Button changeImageButton;
-    Button increaseQuantityButton;
-    Button decreaseQuantityButton;
-    Button saveButton;
-    Button deleteButton;
-    Button orderMoreButton;
-    long itemId;
-    Boolean editMode = false;
+    private static final int REQUEST_IMAGE_CAPTURE = 1;
+    private InventoryDbHelper dbHelper = new InventoryDbHelper(this);
+    private ImageView productImage;
+    private EditText titleText;
+    private EditText priceText;
+    private EditText quantityText;
+    private EditText suppilerText;
+    private Button changeImageButton;
+    private Button increaseQuantityButton;
+    private Button decreaseQuantityButton;
+    private Button saveButton;
+    private Button deleteButton;
+    private Button orderMoreButton;
+    private long itemId;
+    private Boolean editMode = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
