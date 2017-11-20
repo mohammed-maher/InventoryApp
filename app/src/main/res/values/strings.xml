@@ -4,7 +4,7 @@
     <string name="order_button">Sell</string>
     <string name="price_text">PRICE :</string>
     <string name="quantity_text">QUANTITY :</string>
-    <string name="change_image_string">Change</string>
+    <string name="change_image_string">Select Image</string>
     <string name="title_string">TITLE</string>
     <string name="suppiler_number_string">Suppiler Number</string>
     <string name="save_string">Save</string>
